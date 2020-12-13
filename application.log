@@ -25,3 +25,8 @@
 2020-12-13 22:52:40.562  WARN 4004 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2020-12-13 22:52:40.860  INFO 4004 --- [restartedMain] .b.e.EmployeePayRollAppSpringApplication : Started EmployeePayRollAppSpringApplication in 3.214 seconds (JVM running for 4.138)
 2020-12-13 22:52:40.864  INFO 4004 --- [restartedMain] .b.e.EmployeePayRollAppSpringApplication : Employee Payroll App Started in COMMON Environment
+2020-12-13 23:02:43.268  INFO 4004 --- [restartedMain] .b.e.EmployeePayRollAppSpringApplication : Starting EmployeePayRollAppSpringApplication using Java 1.8.0_261 on DESKTOP-DAETKHE with PID 4004 (D:\AssignmentBridgeLabs\EmployeepayRollAppSpring\target\classes started by GV in D:\AssignmentBridgeLabs\EmployeePayRollAppSpring)
+2020-12-13 23:02:43.268 DEBUG 4004 --- [restartedMain] .b.e.EmployeePayRollAppSpringApplication : Running with Spring Boot v2.4.1, Spring v5.3.2
+2020-12-13 23:02:43.268  INFO 4004 --- [restartedMain] .b.e.EmployeePayRollAppSpringApplication : No active profile set, falling back to default profiles: default
+2020-12-13 23:02:43.525  WARN 4004 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-13 23:02:43.609  INFO 4004 --- [restartedMain] .b.e.EmployeePayRollAppSpringApplication : Started EmployeePayRollAppSpringApplication in 0.361 seconds (JVM running for 606.886)
