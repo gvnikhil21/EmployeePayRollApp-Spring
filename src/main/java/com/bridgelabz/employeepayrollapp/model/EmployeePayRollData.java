@@ -1,11 +1,21 @@
 package com.bridgelabz.employeepayrollapp.model;
 
+import java.time.LocalDate;
+import java.util.List;
+
 import com.bridgelabz.employeepayrollapp.dto.EmployeePayRollDTO;
 
-public class EmployeePayRollData {
+import lombok.Data;
+
+public @Data class EmployeePayRollData {
 	private int employeeId;
 	private String name;
 	private long salary;
+	private String gender;
+	private String startDate;
+	private String note;
+	private String profilePic;
+	private List<String> departments;
 
 	public EmployeePayRollData() {
 	}
@@ -14,29 +24,10 @@ public class EmployeePayRollData {
 		this.employeeId = employeeId;
 		this.name = employeePayRollDTO.name;
 		this.salary = employeePayRollDTO.salary;
-	}
-
-	public int getEmployeeId() {
-		return employeeId;
-	}
-
-	public void setEmployeeId(int employeeId) {
-		this.employeeId = employeeId;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public long getSalary() {
-		return salary;
-	}
-
-	public void setSalary(long salary) {
-		this.salary = salary;
+		this.gender = employeePayRollDTO.gender;
+		this.note = employeePayRollDTO.note;
+		this.startDate = employeePayRollDTO.startDate;
+		this.profilePic = employeePayRollDTO.profilePic;
+		this.departments = employeePayRollDTO.department;
 	}
 }

@@ -14,5 +14,5 @@ public interface IEmployeePayRollService {
 
 	EmployeePayRollData updateEmployeePayRollData(int empId, EmployeePayRollDTO employeePayRollDTO);
 
-	void delteEmployeePayRollData(int empId);
+	void deleteEmployeePayRollData(int empId);
 }
