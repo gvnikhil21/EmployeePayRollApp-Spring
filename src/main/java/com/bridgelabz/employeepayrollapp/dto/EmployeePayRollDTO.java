@@ -25,7 +25,7 @@ public @ToString class EmployeePayRollDTO {
 	@Pattern(regexp = "Male|Female", message = "Gender needs to be male or female")
 	public String gender;
 
-	@JsonFormat(pattern = "dd MMM yyyy")
+	@JsonFormat(pattern = "dd MM yyyy")
 	@NotNull(message = "Start-Date should not be empty")
 	@PastOrPresent(message = "startDate should be past or today's date")
 	public LocalDate startDate;
@@ -38,9 +38,4 @@ public @ToString class EmployeePayRollDTO {
 
 	@NotNull(message = "Department should not be empty")
 	public List<String> department;
-
-	public EmployeePayRollDTO(String name, long salary) {
-		this.name = name;
-		this.salary = salary;
-	}
 }

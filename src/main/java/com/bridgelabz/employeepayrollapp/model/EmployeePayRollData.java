@@ -13,12 +13,15 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 import com.bridgelabz.employeepayrollapp.dto.EmployeePayRollDTO;
 
 import lombok.Data;
 
 @Entity
 @Table(name = "employee_payroll")
+@DynamicUpdate(value = true)
 public @Data class EmployeePayRollData {
 
 	@Id

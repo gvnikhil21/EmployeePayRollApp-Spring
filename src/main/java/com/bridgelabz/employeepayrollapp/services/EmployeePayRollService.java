@@ -1,6 +1,5 @@
 package com.bridgelabz.employeepayrollapp.services;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -51,9 +50,21 @@ public class EmployeePayRollService implements IEmployeePayRollService {
 	@Override
 	public EmployeePayRollData updateEmployeePayRollData(int empId, EmployeePayRollDTO employeePayRollDTO) {
 		EmployeePayRollData empData = this.getEmployeePayRollDataById(empId);
-		empData.setName(employeePayRollDTO.name);
-		empData.setSalary(employeePayRollDTO.salary);
-		return employeeRepository.save(empData);
+		if (!empData.getName().equals(employeePayRollDTO.name))
+			empData.setName(employeePayRollDTO.name);
+		if (empData.getSalary() != employeePayRollDTO.salary)
+			empData.setSalary(employeePayRollDTO.salary);
+		if (!empData.getGender().equals(employeePayRollDTO.gender))
+			empData.setGender(employeePayRollDTO.gender);
+		if (!empData.getNote().equals(employeePayRollDTO.note))
+			empData.setNote(employeePayRollDTO.note);
+		if (!empData.getProfilePic().equals(employeePayRollDTO.profilePic))
+			empData.setProfilePic(employeePayRollDTO.profilePic);
+		if (!empData.getDepartments().equals(employeePayRollDTO.department))
+			empData.setDepartments(employeePayRollDTO.department);
+		if (!empData.getStartDate().equals(employeePayRollDTO.startDate))
+			empData.setStartDate(employeePayRollDTO.startDate);
+		return employeeRepository.save(new EmployeePayRollData(empId, employeePayRollDTO));
 	}
 
 	@Override
